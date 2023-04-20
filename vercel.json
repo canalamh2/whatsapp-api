@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "src/server.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "src/server.js" }
+  ],
+  "env": {
+    "TOKEN": "CODIGO-DO-TOKEN",
+    "PROTECT_ROUTES": "true",
+    "PORT": "3333",
+    "RESTORE_SESSIONS_ON_START_UP": "true",
+    "APP_URL": "http://localhost:3333",
+    "LOG_LEVEL": "silent",
+    "CLIENT_PLATFORM": "FastBot N8N v4",
+    "CLIENT_BROWSER": "Chrome",
+    "CLIENT_VERSION": "4.0.0",
+    "INSTANCE_MAX_RETRY_QR": "5",
+    "MONGODB_ENABLED": "true",
+    "MONGODB_URL": "mongodb://mongo:9V9L85X9RqGpfTVYP6mq@containers-us-west-191.railway.app:7294",
+    "WEBHOOK_ENABLED": "true",
+    "WEBHOOK_URL": "https://eo6v4lg93av5zui.m.pipedream.net",
+    "WEBHOOK_BASE64": "false",
+    "WEBHOOK_ALLOWED_EVENTS": "messages"
+  },
+  "functions": {
+    "api": {
+      "memory": 1024,
+      "maxDuration": 60,
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
